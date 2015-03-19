@@ -1,0 +1,61 @@
+body{
+	background-image: url('../img/01.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		-ms-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+}
+
+.form_login, .button, body, h1, h2, h3, h4, h5, h6{
+	font-family: Segoe UI;
+}
+
+.panel{
+	background: transparent;
+}
+
+#button{
+	background: transparent;
+	border: thin solid #fff;
+}
+
+#button:hover{
+	background: teal;
+}
+
+.form_login{
+	width: 100%;
+	height: auto;
+	padding: 20px 20px 40px;
+}
+
+@media(max-width: 480px){
+	
+	body{
+	background-image: url('../img/02.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		-ms-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	}
+	
+	#button:hover{
+		background: #2574A9;
+	}
+	
+	.form_login{
+		margin-top: -10%;
+		margin-bottom: -30%;
+	}
+	
+	.panel{
+		border: none;
+	}
+	
+}

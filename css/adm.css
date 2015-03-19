@@ -1,0 +1,46 @@
+body{
+	background-image: url('../img/04.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		-ms-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+}
+
+.button, body, h1, h2, h3, h4, h5, h6{
+	font-family: Segoe UI, sans-serif;
+}
+
+label{
+	color: #fff;
+}
+
+#button{
+	background: transparent;
+	border: thin solid #fff;
+}
+
+#button:hover{
+	background: teal;
+}
+
+@media(max-width: 480px){
+	
+	body{
+		background-image: url('../img/04.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		   -moz-background-size: cover;
+			-ms-background-size: cover;
+			 -o-background-size: cover;
+				background-size: cover;
+	}
+	
+	#button:hover{
+		background: #2574A9;
+	}
+	
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="pt-BR" > <![endif]-->
+<html class="no-js" lang="pt-BR" >
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Registrar Ocorrência</title>
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/foundation.css">
+		<link rel="stylesheet" href="../css/app.css">
+		<link rel="stylesheet" href="../css/adm.css">
+		<script src="../js/vendor/modernizr.js"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="../img/favicon.ico" />
+	</head>
+	<body>
+
+		<!-- Menu -->
+		<div class="contain-to-grid sticky">
+			<nav class="top-bar" data-topbar data-options="sticky: on_large" role="navigation">
+				<ul class="title-area">
+					<li class="name"><h1><a href="#"><strong>MY</strong></a></h1></li>
+					<li class="toggle-topbar icon-menu"><a href=""><i class="fa fa-navicon"></i></a></li>
+				</ul>
+				<section class="top-bar-section">
+					<ul class="left">
+						<li><a href="../view/adm.php">Usuários</a></li>
+						<li class="has-dropdown">
+						<a href="#">Clientes</a>
+						<ul class="dropdown">
+							<li><a href="../view/pesquisar_cliente.php">Procurar cliente</a></li>
+						</ul>
+						<li class="has-dropdown">
+						<a href="#">Cadastrar</a>
+						<ul class="dropdown">
+							<li><a href="../view/incluir.php">Cadastrar usuário</a></li>
+							<li><a href="../view/incluir-cliente.php">Cadastrar cliente</a></li>
+						</ul>
+						<li class="has-dropdown active">
+							<a href="#">Ocorrência</a>
+							<ul class="dropdown">
+								<li><a href="#">Ver ocorrências</a></li>
+								<li class="active"><a href="#">Registrar ocorrência</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="right">
+						<li><a href="?logout=ok">Sair</a></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+		<!-- Fim menu -->
+		
+		<!-- Topo do usuário -->
+		<div class="row" style="margin-top: 3%;">
+			<div class="small-12 small-centered medium-10 medium-centered large-12 large-centered xlarge-12 xlarge-centered columns">
+				<div class="panel radius" style="background: transparent;">
+					<p class="text-center" style="color: #fff; font-size: 20px; padding: 40px;"><i class="fa fa-user"></i> Conectado: Carlos Eduardo<br/>
+					<i class="fa fa-calendar-o"></i> Data: 03/03/2015 21:36<?php //echo $data; ?></p>
+				</div>
+			</div>
+		</div>
+		<!-- Fim topo do usuário -->
+		
+		<div class="row radius">
+			<div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
+				<div class="panel radius" style="background: #999;">
+					<h4 style=" color: #fff;"><i class="fa fa-list"></i> Registrar Ocorrência</h4><br/>
+					<div class="panel radius" style="background: #333">
+						<p class="text-left" style="color: #fff;"><i class="fa fa-check-square"></i> Data de abertura: 03/03/2015 21:31<br/><i class="fa fa-user"></i> Usuário: Carlos Eduardo</p>
+					</div>
+					<form data-abide role="form" action="" method="post">
+						<label for="solicitante">Solicitante:</label>
+						<div class="name-field">
+							<input type="text" name="solicitante" autofocus required>
+							<small class="error">Nome do solicitante obrigatório</small>
+						</div>
+						<label for="lblEmpresa">Empresa:</label>
+						<select name="empresa" required>
+							<option value="">Selecione...</option>
+							<option value="crc">CRC Compressores</option>
+							<option value="ra">RA Connect Informática</option>
+							<?php //while($prod = mysql_fetch_array($query)) { ?>
+							<!--<option value="<?php //echo $prod['id'] ?>"><?php //echo $prod['descricao'] ?></option>-->
+							<?php //} ?>
+						</select>
+						<div class="name-field">
+							<label for="lblOcorrencia">Ocorrência:<br/></label>
+							<textarea name="ocorrencia" style="height: 20em"></textarea>
+							<small class="error">Informe a ocorrência</small>
+						</div><br/>
+						<button type="submit" class="button radius small primary expand" name="registrar" onclick="return confirm('Registrar esta ocorrência?')"><i class="fa fa-check-square"></i> Registrar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../js/vendor/jquery.js"></script>
+		<script src="../js/foundation.min.js"></script>
+		<script> $(document).foundation(); </script>
+		
+	</body>
+</html>
