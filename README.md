@@ -1,3 +1,1 @@
 # ocorrencias
-
-HUEHUEHUEHEU BR BR
